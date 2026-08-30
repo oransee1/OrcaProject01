@@ -318,13 +318,13 @@ function renderReleases() {
 
   container.className = "piano-releases-container";
   container.innerHTML = `
-    <div class="piano-popular-tracks-box reveal">
+    <div class="piano-popular-tracks-box reveal active">
       <div class="tracks-box-header">
-        <h3 class="tracks-box-title">POPULAR TRACKS</h3>
+        <h3 class="tracks-box-title">${isEn ? 'POPULAR TRACKS' : '대표 인기곡 (POPULAR TRACKS)'}</h3>
       </div>
       <ul class="piano-tracks-list">
         ${NOVA_DATA.releases.map((t, idx) => `
-          <li class="piano-track-row reveal reveal-delay-${(idx % 4) + 1}">
+          <li class="piano-track-row reveal active reveal-delay-${(idx % 4) + 1}">
             <div class="track-row-title">
               <strong class="track-name">${t.title}</strong>
               <span class="track-album">(${t.album})</span>
@@ -349,6 +349,10 @@ function renderReleases() {
       </div>
     </div>
   `;
+
+  if (typeof observeNewReveals === 'function') {
+    observeNewReveals();
+  }
 }
 
 /* MV / Video Modal */
