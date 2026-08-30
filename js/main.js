@@ -276,7 +276,7 @@ function openArtistModal(artistId) {
         <div>
           <span class="artist-badge-pill" style="position: static; margin-bottom: 8px; display: inline-block;">${artist.badge}</span>
           <h2 style="font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Noto Sans KR', sans-serif; font-size: 1.85rem; font-weight: 800; color: #fff; line-height: 1.4; margin-bottom: 8px;">
-            ${artist.name} <span style="font-size: 1.1rem; color: var(--text-muted); font-weight: 600;">(${artist.krName})</span>
+            ${artist.name} ${!isEn && artist.krName ? `<span style="font-size: 1.1rem; color: var(--text-muted); font-weight: 600;">(${artist.krName})</span>` : ''}
           </h2>
           <p style="color: var(--cyber-cyan); font-size: 0.9rem; margin: 0;">FANDOM: ${artist.fandom} · DEBUT: ${artist.debut}</p>
         </div>
