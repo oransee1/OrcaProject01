@@ -247,20 +247,20 @@ const NOVA_DATA = {
       ]
     },
     {
-      id: "yuri-piano",
-      name: "YURI KANG",
-      krName: "유리 강",
+      id: "sanghoon-kim",
+      name: "Sanghoon, Kim.",
+      krName: "김상훈",
       category: "pianist",
       debut: "2021.03.15",
-      members: ["강유리(Yuri Kang)"],
+      members: ["김상훈(Sanghoon Kim)"],
       concept: "Ambient & Healing Piano Solo",
       fandom: "CALM WAVE",
       image: "images/Sanghoon-Kim1.jpg",
       coverImage: "https://images.unsplash.com/photo-1514119412350-e174d90d280e?q=80&w=1200&auto=format&fit=crop",
       badge: "HEALING PIANIST",
-      bio: "지친 일상에 따뜻한 온기를 불어넣는 잔잔하고 서정적인 피아노 멜로디의 주인공.",
+      bio: "손끝의 섬세한 터치와 깊은 호흡으로 일상에 잔잔한 휴식과 따뜻한 감동을 전하는 감성 피아니스트.",
       spotifyUrl: "#",
-      youtubeUrl: "#",
+      youtubeUrl: "https://www.youtube.com/watch?v=pKtkKWE8EEM",
       instagramUrl: "#",
       topTracks: [
         { 
