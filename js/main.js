@@ -234,9 +234,12 @@ function openArtistModal(artistId) {
   const modalBody = document.getElementById("artist-modal-body");
   const isEn = window.currentLang === 'en';
 
-  const memberListHtml = artist.members.length > 1
-    ? `<p style="margin-bottom: 12px; color: var(--text-sub);"><strong>${isEn ? 'MEMBERS:' : '멤버:'}</strong> ${artist.members.join(", ")}</p>`
-    : `<p style="margin-bottom: 12px; color: var(--text-sub);"><strong>${isEn ? 'SOLO ARTIST:' : '솔로 아티스트:'}</strong> ${artist.members[0]}</p>`;
+  const membersArray = (isEn && artist.enMembers) ? artist.enMembers : artist.members;
+  const memberListHtml = membersArray.length > 1
+    ? `<p style="margin-bottom: 12px; color: var(--text-sub);"><strong>${isEn ? 'MEMBERS:' : '멤버:'}</strong> ${membersArray.join(", ")}</p>`
+    : `<p style="margin-bottom: 12px; color: var(--text-sub);"><strong>${isEn ? 'SOLO ARTIST:' : '솔로 아티스트:'}</strong> ${membersArray[0]}</p>`;
+
+  const bioText = (isEn && artist.enBio) ? artist.enBio : artist.bio;
 
   const tracksHtml = artist.topTracks.map(t => {
     const hasMedia = t.sheetPdf || t.audioSrc;
@@ -283,7 +286,7 @@ function openArtistModal(artistId) {
     
     <div style="margin-bottom: 24px;">
       <h4 style="font-size: 1.1rem; color: #fff; margin-bottom: 8px;">${isEn ? 'ABOUT ARTIST' : '아티스트 소개'}</h4>
-      <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 14px;">${artist.bio}</p>
+      <p style="color: var(--text-muted); line-height: 1.7; margin-bottom: 14px;">${bioText}</p>
       ${memberListHtml}
     </div>
 
