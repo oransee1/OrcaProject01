@@ -427,6 +427,18 @@ window.addEventListener("click", (e) => {
 /* ==========================================================================
    8. AUDITION FORM MODAL & HANDLING
    ========================================================================== */
+/* ==========================================================================
+   7-1. ABOUT MUSIC STORY MODAL
+   ========================================================================== */
+function openAboutStoryModal(event) {
+  if (event) event.preventDefault();
+  const modal = document.getElementById("about-story-modal");
+  if (modal) {
+    modal.classList.add("active");
+    document.body.style.overflow = "hidden";
+  }
+}
+
 function openAuditionModal() {
   const modal = document.getElementById("audition-modal");
   if (modal) {
