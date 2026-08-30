@@ -191,7 +191,7 @@ const NOVA_DATA = {
 
   // 컴백 D-DAY 하이라이트
   featuredComeback: {
-    artist: "VIVID9 (비비드나인)",
+    artist: "Sang-hoon's Piano",
     channelName: "천사와춤을",
     title: "SUPERNOVA ODYSSEY",
     type: "The 3rd Mini Album",
