@@ -643,7 +643,7 @@ const NOVA_DATA = {
       enDesc: "A peaceful lazy Saturday melody that gently comforts your soul with warm ambient sunlight",
       badge: "LAZY & RELAX",
       tracksCount: "9 TRACKS · 38 MIN",
-      cover: "images/playlist_korean_nature4.jpg",
+      cover: "images/playlist_lazy_saturday_suns.jpg",
       primaryTrackTitle: "Lazy Saturday Suns",
       primaryTrackArtist: "Sanghoon, Kim.",
       audioSrc: "sheet music/5-Lazy Saturday Suns/Lazy Saturday Suns.mp3",
