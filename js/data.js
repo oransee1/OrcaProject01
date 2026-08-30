@@ -212,7 +212,7 @@ const NOVA_DATA = {
     releaseDate: "2026.09.15 18:00 KST",
     targetTimestamp: new Date(Date.now() + 16 * 24 * 60 * 60 * 1000 + 4 * 60 * 60 * 1000).toISOString(),
     teaserVideoUrl: "https://www.youtube-nocookie.com/embed/UF528KwJ5Io?autoplay=1&mute=0&rel=0",
-    watchUrl: "https://www.youtube.com/watch?v=UF528KwJ5Io&list=RDMMUF528KwJ5Io&index=1",
+    watchUrl: "https://www.youtube.com/@%EC%B2%9C%EC%82%AC%EC%99%80%EC%B6%A4%EC%9D%84-t2o",
     conceptImage: "https://img.youtube.com/vi/UF528KwJ5Io/maxresdefault.jpg",
     fallbackImage: "https://img.youtube.com/vi/UF528KwJ5Io/hqdefault.jpg",
     description: "경계를 허무는 강렬한 퓨처리스틱 사운드와 비비드한 비주얼 아트워크의 정점."
