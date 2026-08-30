@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NOVA ENTERTAINMENT | Global K-POP Label</title>
+  
+  <!-- Meta SEO -->
+  <meta name="description" content="NOVA ENTERTAINMENT - Beyond the Universe, The Next Beat of K-POP. 차세대 글로벌 K-POP 아티스트와 독창적인 음악 세계를 선보이는 엔터테인먼트 레이블." />
+  <meta property="og:title" content="NOVA ENTERTAINMENT | Global K-POP Label" />
+  <meta property="og:description" content="BEYOND THE UNIVERSE, THE NEXT BEAT OF K-POP" />
+  <meta property="og:type" content="website" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Ambient Glowing Background Lights -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+
+  <!-- NAVIGATION BAR -->
+  <nav class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#" class="brand-logo">
+        <div class="logo-symbol">N</div>
+        <span class="logo-text">NOVA<span style="color: var(--secondary-neon);">.</span>ENT</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#about" class="nav-link" data-i18n="nav_about">ABOUT</a></li>
+        <li><a href="#artists" class="nav-link" data-i18n="nav_artists">ARTISTS</a></li>
+        <li><a href="#releases" class="nav-link" data-i18n="nav_releases">RELEASES</a></li>
+        <li><a href="#tours" class="nav-link" data-i18n="nav_tours">WORLD TOUR</a></li>
+        <li><a href="#audition" class="nav-link" data-i18n="nav_audition">AUDITION</a></li>
+        <li><a href="#news" class="nav-link" data-i18n="nav_news">NEWS & IR</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Language Switcher (KR / EN) -->
+        <div class="lang-switch-box" id="lang-switch-box">
+          <button class="lang-btn active" id="lang-ko-btn" onclick="setLanguage('ko')" title="한국어로 보기">KR</button>
+          <span class="lang-divider">/</span>
+          <button class="lang-btn" id="lang-en-btn" onclick="setLanguage('en')" title="View in English">EN</button>
+        </div>
+
+        <!-- BGM Audio Player (Watercolor Bus Stop.mp3) -->
+        <audio id="bgm-audio-player" src="BGM%20Sound/Watercolor%20Bus%20Stop.mp3" preload="auto" loop></audio>
+        <button id="bgm-toggle-btn" class="bgm-btn" onclick="toggleBGM()" title="BGM 재생/정지 (Watercolor Bus Stop.mp3)">
+          <i class="fa-solid fa-music"></i>
+          <span>BGM</span>
+          <div class="sound-wave" id="bgm-sound-wave" style="display: none;">
+            <span></span><span></span><span></span><span></span><span></span>
+          </div>
+        </button>
+
+        <button class="btn btn-primary btn-sm" onclick="openAuditionModal()" id="nav-audition-btn">
+          <i class="fa-solid fa-sparkles"></i> <span data-i18n="btn_audition">AUDITION</span>
+        </button>
+
+        <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="about">
+    <div class="hero-bg-backdrop"></div>
+    <div class="hero-overlay-grid"></div>
+    <div class="container">
+      <div class="hero-content">
+        <!-- Left Text Hero -->
+        <div class="hero-text-content reveal">
+          <div class="hero-badge-tag animate-pulse-neon">
+            <i class="fa-solid fa-bolt"></i> <span data-i18n="hero_badge">NEXT GENERATION K-POP WAVE</span>
+          </div>
+          <h1 class="hero-title">
+            <span data-i18n="hero_title_1">BEYOND THE</span> <br />
+            <span class="outline-text-hero">UNIVERSE</span>
+          </h1>
+          <p class="hero-desc" data-i18n="hero_desc">
+            노바 엔터테인먼트는 음악과 테크놀로지, 독창적인 세계관이 융합된 
+            새로운 차원의 K-POP 엔터테인먼트 생태계를 창조합니다. 전 세계 무대를 뒤흔들 
+            글로벌 아티스트들의 역동적인 무대를 경험하세요.
+          </p>
+          <div class="hero-cta-group">
+            <a href="#artists" class="btn btn-primary">
+              <i class="fa-solid fa-users"></i> <span data-i18n="hero_btn_roster">ARTIST ROSTER</span>
+            </a>
+            <a href="#releases" class="btn btn-glass">
+              <i class="fa-solid fa-compact-disc"></i> <span data-i18n="hero_btn_releases">LATEST RELEASES</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right D-DAY Countdown Card -->
+        <div class="comeback-card reveal reveal-delay-2">
+          <div class="comeback-header">
+            <span class="comeback-tag animate-pulse-neon" data-i18n="countdown_title">D-DAY COUNTDOWN</span>
+            <span style="font-size: 0.8rem; color: var(--cyber-cyan); font-weight: 700;">2026.09.15 18:00 KST</span>
+          </div>
+
+          <div class="comeback-img-wrap" id="comeback-teaser-box">
+            <img src="https://img.youtube.com/vi/UF528KwJ5Io/maxresdefault.jpg" onerror="this.onerror=null; this.src='https://img.youtube.com/vi/UF528KwJ5Io/hqdefault.jpg';" alt="천사와춤을 - VIVID9 Supernova" id="comeback-teaser-img" />
+            <div class="play-teaser-btn" onclick="playHeroTeaserInline()" id="comeback-play-btn" title="티저 영상 재생">
+              <i class="fa-solid fa-play"></i>
+            </div>
+          </div>
+
+          <div>
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 4px;">
+              <h3 style="font-size: 1.4rem; color: #fff;">VIVID9 (비비드나인)</h3>
+              <a href="https://www.youtube.com/watch?v=UF528KwJ5Io&list=RDMMUF528KwJ5Io&index=1" target="_blank" rel="noopener noreferrer" style="font-size: 0.8rem; color: #ff3344; font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 5px; background: rgba(255, 51, 68, 0.12); padding: 4px 12px; border-radius: 9999px; border: 1px solid rgba(255, 51, 68, 0.35); transition: var(--transition-smooth);" onmouseover="this.style.background='rgba(255, 51, 68, 0.25)'" onmouseout="this.style.background='rgba(255, 51, 68, 0.12)'">
+                <i class="fa-brands fa-youtube"></i> 천사와춤을
+              </a>
+            </div>
+            <p style="color: var(--secondary-neon); font-size: 0.9rem; font-weight: 700; margin-bottom: 16px;">The 3rd Mini Album &lt;SUPERNOVA ODYSSEY&gt;</p>
+          </div>
+
+          <div class="countdown-grid">
+            <div class="timer-box">
+              <span class="timer-num" id="timer-days">16</span>
+              <span class="timer-label" data-i18n="countdown_days">DAYS</span>
+            </div>
+            <div class="timer-box">
+              <span class="timer-num" id="timer-hours">04</span>
+              <span class="timer-label" data-i18n="countdown_hours">HOURS</span>
+            </div>
+            <div class="timer-box">
+              <span class="timer-num" id="timer-mins">30</span>
+              <span class="timer-label" data-i18n="countdown_mins">MINS</span>
+            </div>
+            <div class="timer-box">
+              <span class="timer-num" id="timer-secs">15</span>
+              <span class="timer-label" data-i18n="countdown_secs">SECS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS TICKER -->
+  <section class="stats-section">
+    <div class="container">
+      <div class="stats-grid" id="stats-grid">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTISTS SECTION -->
+  <section class="section" id="artists">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-subtitle" data-i18n="artists_sub">EXCLUSIVE ROSTER</span>
+        <h2 class="section-title"><span data-i18n="artists_title">GLOBAL</span> <span class="gradient-text" data-i18n="artists_title_highlight">ARTISTS</span></h2>
+        <p class="section-desc" data-i18n="artists_desc">노바 엔터테인먼트와 함께 글로벌 트렌드를 주도하는 독보적 라인업</p>
+      </div>
+
+      <!-- Filters -->
+      <div class="artist-filters reveal reveal-delay-1">
+        <button class="filter-btn active" onclick="filterArtists('all', this)" data-i18n="filter_all">ALL ARTISTS</button>
+        <button class="filter-btn" onclick="filterArtists('girlgroup', this)" data-i18n="filter_girlgroup">GIRL GROUP</button>
+        <button class="filter-btn" onclick="filterArtists('boygroup', this)" data-i18n="filter_boygroup">BOY GROUP</button>
+        <button class="filter-btn" onclick="filterArtists('solo', this)" data-i18n="filter_solo">SOLO ARTIST</button>
+      </div>
+
+      <!-- Artists Grid -->
+      <div class="artists-grid" id="artists-grid">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- LATEST RELEASES SECTION -->
+  <section class="section" id="releases" style="background: rgba(12, 12, 18, 0.5);">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-subtitle" data-i18n="releases_sub">DISCOGRAPHY & MUSIC</span>
+        <h2 class="section-title"><span data-i18n="releases_title">LATEST</span> <span class="gradient-text" data-i18n="releases_title_highlight">RELEASES</span></h2>
+        <p class="section-desc" data-i18n="releases_desc">전 세계 차트를 강타한 노바 엔터테인먼트의 최신 음원 및 앨범</p>
+      </div>
+
+      <div class="releases-grid" id="releases-grid">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- WORLD TOUR & LIVE SCHEDULE -->
+  <section class="section" id="tours">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-subtitle" data-i18n="tours_sub">LIVE & STAGE</span>
+        <h2 class="section-title"><span data-i18n="tours_title">WORLD TOUR</span> <span class="gradient-text" data-i18n="tours_title_highlight">SCHEDULE</span></h2>
+        <p class="section-desc" data-i18n="tours_desc">전 세계 아레나와 스타디움에서 펼쳐지는 생생한 라이브 콘서트</p>
+      </div>
+
+      <div class="tour-container reveal reveal-delay-1">
+        <div class="tour-list" id="tour-list">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GLOBAL AUDITION SECTION -->
+  <section class="section" id="audition" style="padding-top: 60px;">
+    <div class="container">
+      <div class="audition-banner reveal">
+        <span class="comeback-tag" style="display: inline-block; margin-bottom: 16px;" data-i18n="audition_tag">2026 GLOBAL SEARCH</span>
+        <h2><span data-i18n="audition_title">BE THE NEXT</span> <span class="gradient-text" data-i18n="audition_title_highlight">GLOBAL ICON</span></h2>
+        <p data-i18n="audition_desc">당신의 숨겨진 열정과 재능으로 세계 무대의 주인공이 되세요. 노바 엔터테인먼트가 미래의 글로벌 스타를 찾습니다.</p>
+        
+        <div class="audition-fields">
+          <span class="field-tag"><i class="fa-solid fa-microphone-lines"></i> <span data-i18n="field_vocal">VOCAL</span></span>
+          <span class="field-tag"><i class="fa-solid fa-person-walking"></i> <span data-i18n="field_dance">DANCE</span></span>
+          <span class="field-tag"><i class="fa-solid fa-record-vinyl"></i> <span data-i18n="field_rap">RAP</span></span>
+          <span class="field-tag"><i class="fa-solid fa-sliders"></i> <span data-i18n="field_producer">PRODUCER</span></span>
+        </div>
+
+        <button class="btn btn-primary" onclick="openAuditionModal()">
+          <i class="fa-solid fa-paper-plane"></i> <span data-i18n="btn_apply_audition">ONLINE AUDITION APPLY</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWS & BUSINESS IR -->
+  <section class="section" id="news">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-subtitle" data-i18n="news_sub">COMPANY & MEDIA</span>
+        <h2 class="section-title"><span data-i18n="news_title">NEWS &</span> <span class="gradient-text" data-i18n="news_title_highlight">IR INSIGHTS</span></h2>
+        <p class="section-desc" data-i18n="news_desc">노바 엔터테인먼트의 주요 경영 소식 및 글로벌 활동 보도자료</p>
+      </div>
+
+      <div class="news-grid" id="news-grid">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: About -->
+        <div class="footer-about">
+          <div class="brand-logo">
+            <div class="logo-symbol">N</div>
+            <span class="logo-text">NOVA<span style="color: var(--secondary-neon);">.</span>ENT</span>
+          </div>
+          <p data-i18n="footer_desc">
+            (주)노바엔터테인먼트 | 대표이사: Alex Kang & Park Minji<br />
+            서울특별시 강남구 테헤란로 501 노바타워 18F<br />
+            사업자등록번호: 214-88-09123 | 통신판매업신고: 제2026-서울강남-0412호
+          </p>
+          <div class="social-links">
+            <a href="#" class="social-btn" title="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" class="social-btn" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="social-btn" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#" class="social-btn" title="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#" class="social-btn" title="Spotify"><i class="fa-brands fa-spotify"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation -->
+        <div class="footer-col">
+          <h5 data-i18n="footer_company">COMPANY</h5>
+          <ul class="footer-links">
+            <li><a href="#about" data-i18n="nav_about">About NOVA</a></li>
+            <li><a href="#artists" data-i18n="nav_artists">Artists</a></li>
+            <li><a href="#news" data-i18n="nav_news">IR Information</a></li>
+            <li><a href="#">Career / 채용</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Services -->
+        <div class="footer-col">
+          <h5 data-i18n="footer_services">SERVICES</h5>
+          <ul class="footer-links">
+            <li><a href="#audition" data-i18n="nav_audition">Global Audition</a></li>
+            <li><a href="#tours" data-i18n="nav_tours">Ticket & Tour</a></li>
+            <li><a href="#">NOVA Official Shop</a></li>
+            <li><a href="#">Fan Community</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Newsletter -->
+        <div class="footer-col">
+          <h5 data-i18n="footer_newsletter">NEWSLETTER</h5>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 12px;" data-i18n="footer_newsletter_desc">소속 아티스트의 컴백 및 티켓팅 소식을 가장 먼저 받아보세요.</p>
+          <form class="newsletter-form" onsubmit="handleNewsletterSubscribe(event)">
+            <input type="email" id="newsletter-email-input" class="newsletter-input" placeholder="Your email address" required />
+            <button type="submit" id="newsletter-submit-btn" class="btn btn-primary btn-sm" data-i18n="footer_newsletter_btn">구독</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div data-i18n="footer_rights">&copy; 2026 NOVA ENTERTAINMENT CO., LTD. ALL RIGHTS RESERVED.</div>
+        <div style="display: flex; gap: 16px; align-items: center;">
+          <span>TERMS OF SERVICE</span>
+          <span>PRIVACY POLICY</span>
+          <div class="lang-switch-box">
+            <button class="lang-btn active" onclick="setLanguage('ko')">KR</button>
+            <span class="lang-divider">/</span>
+            <button class="lang-btn" onclick="setLanguage('en')">EN</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       MODALS
+       ========================================================================== -->
+  
+  <!-- 1. Artist Detail Modal -->
+  <div class="modal-overlay" id="artist-modal">
+    <div class="modal-content">
+      <button class="modal-close-btn" onclick="closeModal('artist-modal')">&times;</button>
+      <div id="artist-modal-body">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. MV / Video Modal -->
+  <div class="modal-overlay" id="video-modal">
+    <div class="modal-content" style="max-width: 850px;">
+      <button class="modal-close-btn" onclick="closeModal('video-modal')">&times;</button>
+      <div id="video-modal-body">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Global Audition Modal -->
+  <div class="modal-overlay" id="audition-modal">
+    <div class="modal-content" style="max-width: 600px;">
+      <button class="modal-close-btn" onclick="closeModal('audition-modal')">&times;</button>
+      <h3 style="font-size: 1.6rem; color: #fff; margin-bottom: 6px;" id="aud-modal-title" data-i18n="audition_modal_title">2026 GLOBAL AUDITION APPLY</h3>
+      <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 24px;" id="aud-modal-subtitle" data-i18n="audition_modal_subtitle">차세대 글로벌 K-POP 스타를 향한 당신의 도전을 응원합니다.</p>
+
+      <form id="audition-form">
+        <div class="form-group">
+          <label class="form-label" for="aud-name" data-i18n="aud_label_name">지원자 성명 (Full Name) *</label>
+          <input type="text" id="aud-name" class="form-input" placeholder="홍길동 / John Doe" required />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="aud-category" data-i18n="aud_label_cat">지원 분야 (Category) *</label>
+          <select id="aud-category" class="form-select" required>
+            <option value="">지원 분야를 선택하세요 / Select Category</option>
+            <option value="보컬(Vocal)">보컬 (Vocal)</option>
+            <option value="댄스(Dance)">댄스 (Dance)</option>
+            <option value="랩(Rap)">랩 (Rap)</option>
+            <option value="프로듀싱(Producer)">작사/작곡/프로듀싱 (Producer)</option>
+          </select>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+          <div class="form-group">
+            <label class="form-label" for="aud-birth" data-i18n="aud_label_birth">생년월일 (Birth Date) *</label>
+            <input type="date" id="aud-birth" class="form-input" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="aud-nationality" data-i18n="aud_label_nat">국적/거주국가 (Country) *</label>
+            <input type="text" id="aud-nationality" class="form-input" placeholder="대한민국, USA, etc." required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="aud-email" data-i18n="aud_label_email">이메일 (Email) *</label>
+          <input type="email" id="aud-email" class="form-input" placeholder="contact@example.com" required />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="aud-video" data-i18n="aud_label_video">영상/음원 링크 (YouTube, Drive, Vimeo) *</label>
+          <input type="url" id="aud-video" class="form-input" placeholder="https://youtube.com/... or cloud drive" required />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="aud-message" data-i18n="aud_label_intro">자기소개 및 지원 동기</label>
+          <textarea id="aud-message" class="form-textarea" rows="3" placeholder="자신의 강점이나 활동 경력을 간략히 적어주세요."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">
+          <i class="fa-solid fa-paper-plane"></i> <span data-i18n="aud_btn_submit">온라인 지원서 최종 제출</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- 4. Welcome Newsletter Email Modal -->
+  <div class="modal-overlay" id="welcome-mail-modal">
+    <div class="modal-content" style="max-width: 620px; padding: 32px;">
+      <button class="modal-close-btn" onclick="closeModal('welcome-mail-modal')">&times;</button>
+      <div id="welcome-mail-modal-body">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
