@@ -220,7 +220,7 @@ const NOVA_DATA = {
       badge: "MAESTRO PIANIST",
       bio: "손끝에서 피어나는 깊은 서사와 웅장한 선율로 전 세계 클래식 & 영화 음악 팬들을 사로잡은 감성 피아니스트.",
       spotifyUrl: "#",
-      youtubeUrl: "https://www.youtube.com/watch?v=UF528KwJ5Io&list=PLIFlATW5erkc&index=2",
+      youtubeUrl: "https://www.youtube.com/watch?v=pKtkKWE8EEM&list=PLIFlATW5erkc&index=4",
       instagramUrl: "#",
       topTracks: [
         { 
@@ -228,8 +228,7 @@ const NOVA_DATA = {
           album: "Piano Journal", 
           plays: "420M",
           sheetPdf: "sheet music/1-Sunday Slow Motion/Sunday Slow Motion.pdf",
-          audioSrc: "sheet music/1-Sunday Slow Motion/Sunday Slow Motion.mp3",
-          videoUrl: "https://www.youtube.com/watch?v=pKtkKWE8EEM"
+          audioSrc: "sheet music/1-Sunday Slow Motion/Sunday Slow Motion.mp3"
         },
         { 
           title: "Watercolor Bus Stop", 

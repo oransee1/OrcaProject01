@@ -252,11 +252,6 @@ function openArtistModal(artistId) {
             <i class="fa-solid fa-play"></i> ${isEn ? 'Play Audio' : '음원듣기'}
           </button>
         ` : ''}
-        ${t.videoUrl ? `
-          <a href="${t.videoUrl}" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();" style="font-size: 0.76rem; padding: 4px 12px; border-radius: 9999px; background: rgba(255,0,51,0.18); border: 1px solid rgba(255,0,51,0.5); color: #fff; text-decoration: none; display: flex; align-items: center; gap: 5px; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" title="곡 공식 유튜브 영상 보기">
-            <i class="fa-brands fa-youtube" style="color: #ff3344;"></i> ${isEn ? 'Watch Video' : '영상보기'}
-          </a>
-        ` : ''}
         <span style="font-size: 0.85rem; color: var(--cyber-cyan); margin-left: 4px;"><i class="fa-solid fa-headphones"></i> ${t.plays}</span>
       </div>
     ` : `<span style="font-size: 0.85rem; color: var(--cyber-cyan);"><i class="fa-solid fa-headphones"></i> ${t.plays}</span>`;
