@@ -320,7 +320,7 @@ function renderReleases() {
   container.innerHTML = `
     <div class="piano-popular-tracks-box reveal active">
       <div class="tracks-box-header">
-        <h3 class="tracks-box-title">${isEn ? 'POPULAR TRACKS' : '대표 인기곡 (POPULAR TRACKS)'}</h3>
+        <h3 class="tracks-box-title">POPULAR TRACKS</h3>
       </div>
       <ul class="piano-tracks-list">
         ${NOVA_DATA.releases.map((t, idx) => `
