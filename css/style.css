@@ -1447,6 +1447,15 @@ h1, h2, h3, h4, .font-display {
   padding: 20px;
 }
 
+.artist-detail-overlay h2 {
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Noto Sans KR', sans-serif !important;
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
 .track-list {
   list-style: none;
   margin-top: 16px;
