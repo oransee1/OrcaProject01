@@ -623,17 +623,17 @@ const NOVA_DATA = {
     },
     {
       id: "pl-3",
-      title: "Focus & Deep Solitude",
-      enTitle: "Focus & Deep Solitude",
+      title: "Symphony of the Cold Brew",
+      enTitle: "Symphony of the Cold Brew",
       desc: "집중과 사색이 필요한 순간, 머릿속을 맑게 비워주는 미니멀 클래식",
-      enDesc: "Minimalist acoustic melodies that clear your mind for deep focus, reading, and contemplation",
+      enDesc: "Deep and subtle piano harmonies that clear your mind for deep focus, reading, and contemplation",
       badge: "STUDY & FOCUS",
       tracksCount: "12 TRACKS · 50 MIN",
       cover: "images/playlist_korean_nature3.jpg",
       primaryTrackTitle: "Symphony of the Cold Brew",
       primaryTrackArtist: "ALEX K",
       audioSrc: "sheet music/3-Symphony of the Cold Brew/Symphony of the Cold Brew.mp3",
-      youtubeUrl: "https://www.youtube.com/watch?v=pKtkKWE8EEM&list=PLIFlATW5erkc&index=4"
+      youtubeUrl: "https://www.youtube.com/watch?v=8s1n_NcVU-U&list=PLIFlATW5erkc&index=1"
     },
     {
       id: "pl-4",
