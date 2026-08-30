@@ -238,15 +238,34 @@ function openArtistModal(artistId) {
     ? `<p style="margin-bottom: 12px; color: var(--text-sub);"><strong>${isEn ? 'MEMBERS:' : '멤버:'}</strong> ${artist.members.join(", ")}</p>`
     : `<p style="margin-bottom: 12px; color: var(--text-sub);"><strong>${isEn ? 'SOLO ARTIST:' : '솔로 아티스트:'}</strong> ${artist.members[0]}</p>`;
 
-  const tracksHtml = artist.topTracks.map(t => `
-    <li class="track-item">
-      <div>
-        <strong style="color: #fff;">${t.title}</strong>
-        <span style="font-size: 0.8rem; color: var(--text-muted); margin-left: 8px;">(${t.album})</span>
+  const tracksHtml = artist.topTracks.map(t => {
+    const hasMedia = t.sheetPdf || t.audioSrc;
+    const mediaBtnsHtml = hasMedia ? `
+      <div style="display: flex; align-items: center; gap: 8px; flex-wrap: wrap;">
+        ${t.sheetPdf ? `
+          <button class="btn btn-glass btn-xs" onclick="event.stopPropagation(); openSheetMusicModal('${t.title}', '${t.sheetPdf}')" style="font-size: 0.76rem; padding: 4px 12px; border-radius: 9999px; background: rgba(236,72,153,0.14); border: 1px solid rgba(236,72,153,0.45); color: #fff; display: flex; align-items: center; gap: 5px; cursor: pointer; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" title="피아노 악보 PDF 보기">
+            <i class="fa-solid fa-file-pdf" style="color: var(--secondary-neon);"></i> ${isEn ? 'Sheet PDF' : '악보보기'}
+          </button>
+        ` : ''}
+        ${t.audioSrc ? `
+          <button class="btn btn-primary btn-xs" onclick="event.stopPropagation(); playFloatingAudio('${t.title}', '${artist.name}', '${t.audioSrc}')" style="font-size: 0.76rem; padding: 4px 14px; border-radius: 9999px; background: linear-gradient(135deg, var(--primary-neon), var(--cyber-cyan)); color: #fff; border: none; display: flex; align-items: center; gap: 5px; cursor: pointer; transition: transform 0.2s; box-shadow: 0 0 10px rgba(168,85,247,0.4);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" title="음원 바로 듣기">
+            <i class="fa-solid fa-play"></i> ${isEn ? 'Play Audio' : '음원듣기'}
+          </button>
+        ` : ''}
+        <span style="font-size: 0.85rem; color: var(--cyber-cyan); margin-left: 4px;"><i class="fa-solid fa-headphones"></i> ${t.plays}</span>
       </div>
-      <span style="font-size: 0.85rem; color: var(--cyber-cyan);"><i class="fa-solid fa-headphones"></i> ${t.plays}</span>
-    </li>
-  `).join("");
+    ` : `<span style="font-size: 0.85rem; color: var(--cyber-cyan);"><i class="fa-solid fa-headphones"></i> ${t.plays}</span>`;
+
+    return `
+      <li class="track-item" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+        <div>
+          <strong style="color: #fff;">${t.title}</strong>
+          <span style="font-size: 0.8rem; color: var(--text-muted); margin-left: 8px;">(${t.album})</span>
+        </div>
+        ${mediaBtnsHtml}
+      </li>
+    `;
+  }).join("");
 
   modalBody.innerHTML = `
     <div class="artist-detail-hero">
@@ -424,6 +443,64 @@ window.addEventListener("click", (e) => {
     iframes.forEach(f => f.src = "");
   }
 });
+
+/* ==========================================================================
+   7-2. SHEET MUSIC PDF MODAL & FLOATING AUDIO DOCK PLAYER
+   ========================================================================== */
+function openSheetMusicModal(title, pdfUrl) {
+  const modal = document.getElementById("sheet-modal");
+  const titleEl = document.getElementById("sheet-modal-title");
+  const iframe = document.getElementById("sheet-pdf-frame");
+  const isEn = window.currentLang === 'en';
+
+  if (titleEl) {
+    titleEl.innerText = isEn ? `${title} - Sheet Music PDF` : `${title} - 공식 악보 PDF`;
+  }
+  if (iframe) {
+    iframe.src = pdfUrl;
+  }
+  if (modal) {
+    modal.classList.add("active");
+    document.body.style.overflow = "hidden";
+  }
+}
+
+function playFloatingAudio(title, artistName, audioUrl) {
+  // 상단 BGM이 켜져있다면 소리가 겹치지 않도록 일시정지
+  const bgmPlayer = document.getElementById("bgm-audio-player");
+  if (bgmPlayer && !bgmPlayer.paused) {
+    bgmPlayer.pause();
+    const wave = document.getElementById("bgm-sound-wave");
+    if (wave) wave.style.display = "none";
+  }
+
+  const dock = document.getElementById("audio-dock-player");
+  const titleEl = document.getElementById("audio-dock-title");
+  const artistEl = document.getElementById("audio-dock-artist");
+  const audioEl = document.getElementById("floating-audio-element");
+
+  if (titleEl) titleEl.innerText = title;
+  if (artistEl) artistEl.innerText = `${artistName} · Piano Solo`;
+  if (audioEl) {
+    audioEl.src = audioUrl;
+    audioEl.play().catch(e => console.log("Audio autoplay prevented:", e));
+  }
+  if (dock) {
+    dock.style.display = "block";
+  }
+}
+
+function stopAndCloseFloatingAudio() {
+  const dock = document.getElementById("audio-dock-player");
+  const audioEl = document.getElementById("floating-audio-element");
+  if (audioEl) {
+    audioEl.pause();
+    audioEl.src = "";
+  }
+  if (dock) {
+    dock.style.display = "none";
+  }
+}
 
 /* ==========================================================================
    8. AUDITION FORM MODAL & HANDLING

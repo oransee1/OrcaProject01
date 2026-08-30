@@ -460,6 +460,51 @@
     </div>
   </div>
 
+  <!-- 5. Sheet Music PDF Modal (악보 뷰어 모달) -->
+  <div class="modal-overlay" id="sheet-modal" style="z-index: 10000;">
+    <div class="modal-content" style="max-width: 960px; height: 86vh; padding: 20px 24px; display: flex; flex-direction: column; background: rgba(15, 15, 23, 0.95); border: 1px solid rgba(168, 85, 247, 0.4);">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <div style="width: 36px; height: 36px; border-radius: 8px; background: rgba(236, 72, 153, 0.15); display: flex; align-items: center; justify-content: center;">
+            <i class="fa-solid fa-file-pdf" style="color: var(--secondary-neon); font-size: 1.3rem;"></i>
+          </div>
+          <div>
+            <h3 id="sheet-modal-title" style="color: #fff; font-size: 1.25rem; font-weight: 800; margin: 0;">Sunday Slow Motion - 악보</h3>
+            <span style="color: var(--cyber-cyan); font-size: 0.8rem;">Official Piano Sheet Music PDF</span>
+          </div>
+        </div>
+        <button class="btn btn-glass btn-sm" onclick="closeModal('sheet-modal')" style="padding: 6px 16px; border-radius: 9999px; background: rgba(255,255,255,0.08);">
+          <i class="fa-solid fa-xmark"></i> <span data-i18n="btn_close">종료</span>
+        </button>
+      </div>
+      <div style="flex: 1; width: 100%; border-radius: 12px; overflow: hidden; background: #1e1e2d; border: 1px solid rgba(255,255,255,0.08);">
+        <iframe id="sheet-pdf-frame" src="" style="width: 100%; height: 100%; border: none;"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. Floating Audio Player Dock (음원 재생 바) -->
+  <div id="audio-dock-player" class="audio-dock" style="display: none;">
+    <div class="audio-dock-content">
+      <div class="audio-dock-info">
+        <div class="audio-dock-disc animate-spin-slow">
+          <i class="fa-solid fa-compact-disc"></i>
+        </div>
+        <div>
+          <h4 id="audio-dock-title" style="color: #fff; font-size: 0.95rem; font-weight: 700; margin: 0 0 2px;">Sunday Slow Motion</h4>
+          <p id="audio-dock-artist" style="color: var(--cyber-cyan); font-size: 0.78rem; margin: 0;">ALEX K · Piano Solo</p>
+        </div>
+      </div>
+      
+      <div class="audio-dock-controls">
+        <audio id="floating-audio-element" controls controlsList="nodownload" style="height: 36px; outline: none;"></audio>
+        <button class="audio-dock-close-btn" onclick="stopAndCloseFloatingAudio()" title="음원 재생 종료">
+          <i class="fa-solid fa-xmark"></i> 종료
+        </button>
+      </div>
+    </div>
+  </div>
+
   <!-- Scripts -->
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>

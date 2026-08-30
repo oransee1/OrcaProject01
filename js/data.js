@@ -223,9 +223,27 @@ const NOVA_DATA = {
       youtubeUrl: "#",
       instagramUrl: "#",
       topTracks: [
-        { title: "Sunday Slow Motion", album: "Piano Journal", plays: "420M" },
-        { title: "Watercolor Bus Stop", album: "Piano Journal", plays: "380M" },
-        { title: "Symphony of the Cold Brew", album: "Memories", plays: "290M" }
+        { 
+          title: "Sunday Slow Motion", 
+          album: "Piano Journal", 
+          plays: "420M",
+          sheetPdf: "sheet music/1-Sunday Slow Motion/Sunday Slow Motion.pdf",
+          audioSrc: "sheet music/1-Sunday Slow Motion/Sunday Slow Motion.mp3"
+        },
+        { 
+          title: "Watercolor Bus Stop", 
+          album: "Piano Journal", 
+          plays: "380M",
+          sheetPdf: "sheet music/2-Watercolor Bus Stop/Watercolor Bus Stop.pdf",
+          audioSrc: "sheet music/2-Watercolor Bus Stop/Watercolor Bus Stop.mp3"
+        },
+        { 
+          title: "Symphony of the Cold Brew", 
+          album: "Memories", 
+          plays: "290M",
+          sheetPdf: "sheet music/3-Symphony of the Cold Brew/Symphony of the Cold Brew.pdf",
+          audioSrc: "sheet music/3-Symphony of the Cold Brew/Symphony of the Cold Brew.mp3"
+        }
       ]
     },
     {
@@ -245,8 +263,20 @@ const NOVA_DATA = {
       youtubeUrl: "#",
       instagramUrl: "#",
       topTracks: [
-        { title: "Saturday Motion", album: "Quiet Sunlight", plays: "210M" },
-        { title: "Lazy Saturday Suns", album: "Quiet Sunlight", plays: "195M" }
+        { 
+          title: "Saturday Motion", 
+          album: "Quiet Sunlight", 
+          plays: "210M",
+          sheetPdf: "sheet music/4-Saturday Motion/Saturday Motion.pdf",
+          audioSrc: "sheet music/4-Saturday Motion/Saturday Motion.mp3"
+        },
+        { 
+          title: "Lazy Saturday Suns", 
+          album: "Quiet Sunlight", 
+          plays: "195M",
+          sheetPdf: "sheet music/5-Lazy Saturday Suns/Lazy Saturday Suns.pdf",
+          audioSrc: "sheet music/5-Lazy Saturday Suns/Lazy Saturday Suns.mp3"
+        }
       ]
     },
     {
