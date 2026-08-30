@@ -919,12 +919,13 @@ h1, h2, h3, h4, .font-display {
 }
 
 .artist-card-title {
-  font-size: 1.4rem;
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Noto Sans KR', sans-serif;
+  font-size: 1.3rem;
   font-weight: 800;
-  margin-bottom: 4px;
+  margin-bottom: 8px;
   color: #fff;
-  line-height: 1.45;
-  padding-bottom: 6px;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
   display: block;
 }
 
@@ -932,6 +933,7 @@ h1, h2, h3, h4, .font-display {
   font-size: 0.85rem;
   color: var(--text-muted);
   margin-bottom: 12px;
+  line-height: 1.4;
 }
 
 .artist-card-preview-btn {
