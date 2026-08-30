@@ -2,7 +2,7 @@ const I18N_DICTIONARY = {
   ko: {
     nav_about: "소개",
     nav_artists: "아티스트",
-    nav_releases: "신보&음원",
+    nav_releases: "악보 & 음원",
     nav_tours: "월드투어",
     nav_audition: "오디션",
     nav_news: "뉴스&IR",
@@ -87,7 +87,7 @@ const I18N_DICTIONARY = {
   en: {
     nav_about: "ABOUT",
     nav_artists: "ARTISTS",
-    nav_releases: "RELEASES",
+    nav_releases: "Sheet music & Audio",
     nav_tours: "WORLD TOUR",
     nav_audition: "AUDITION",
     nav_news: "NEWS & IR",
