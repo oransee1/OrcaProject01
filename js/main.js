@@ -343,8 +343,8 @@ function renderReleases() {
       </ul>
 
       <div class="tracks-box-footer">
-        <a href="https://www.youtube.com/watch?v=UF528KwJ5Io&list=PLIFlATW5erkc&index=2" target="_blank" rel="noopener noreferrer" class="btn btn-youtube-channel">
-          <i class="fa-brands fa-youtube"></i> ${isEn ? 'OFFICIAL YOUTUBE CHANNEL' : '공식 유튜브 채널 바로가기'}
+        <a href="https://www.youtube.com/watch?v=pKtkKWE8EEM&list=PLIFlATW5erkc&index=4" target="_blank" rel="noopener noreferrer" class="btn btn-youtube-channel">
+          <i class="fa-brands fa-youtube"></i> ${isEn ? 'OFFICIAL YOUTUBE (Sunday Slow Motion)' : '공식 유튜브 (Sunday Slow Motion 바로가기)'}
         </a>
       </div>
     </div>
