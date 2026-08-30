@@ -43,8 +43,8 @@ const I18N_DICTIONARY = {
     filter_female: "여성 가수",
     btn_view_profile: "프로필 & 디스코그래피 보기",
     releases_sub: "Sheet music & Audio (악보 & 음원)",
-    releases_title: "최신",
-    releases_title_highlight: "릴리즈",
+    releases_title: "대표 인기곡",
+    releases_title_highlight: "POPULAR TRACKS",
     releases_desc: "전 세계를 매료시킨 Dancing with Angels의 공식 악보 및 고음질 음원 컬렉션",
     tours_sub: "라이브 & 무대",
     tours_title: "월드투어",
@@ -128,8 +128,8 @@ const I18N_DICTIONARY = {
     filter_female: "FEMALE ARTIST",
     btn_view_profile: "VIEW PROFILE & DISCOGRAPHY",
     releases_sub: "Sheet music & Audio",
-    releases_title: "LATEST",
-    releases_title_highlight: "RELEASES",
+    releases_title: "POPULAR",
+    releases_title_highlight: "TRACKS",
     releases_desc: "Chart-topping tracks and official piano sheet music from Dancing with Angels",
     tours_sub: "LIVE & STAGE",
     tours_title: "WORLD TOUR",
@@ -425,73 +425,57 @@ const NOVA_DATA = {
     }
   ],
 
-  // 최신 앨범 릴리즈
+  // 최신 악보 & 음원 릴리즈 (Sheet music & Audio)
   releases: [
     {
-      id: "rel-1",
-      title: "SUPERNOVA ODYSSEY",
-      artist: "VIVID9",
-      type: "Mini Album",
-      date: "2026.09.15",
-      cover: "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=600&auto=format&fit=crop",
-      genre: "Electronic Pop / Hyper-pop",
-      status: "PRE-ORDER",
-      mvUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      tracks: [
-        { no: "01", title: "Supernova (Title)", duration: "3:14", isTitle: true },
-        { no: "02", title: "Starlight Velocity", duration: "2:58", isTitle: false },
-        { no: "03", title: "Midnight Cyber", duration: "3:22", isTitle: false },
-        { no: "04", title: "Afterglow", duration: "3:45", isTitle: false }
-      ]
+      id: "sheet-1",
+      no: "1",
+      title: "Sunday Slow Motion",
+      album: "Piano Journal",
+      artist: "ALEX K",
+      plays: "420M",
+      sheetPdf: "sheet music/1-Sunday Slow Motion/Sunday Slow Motion.pdf",
+      audioSrc: "sheet music/1-Sunday Slow Motion/Sunday Slow Motion.mp3"
     },
     {
-      id: "rel-2",
-      title: "ECLIPSE : THE HORIZON",
-      artist: "LUMEN",
-      type: "The 2nd Regular Album",
-      date: "2026.06.10",
-      cover: "https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=600&auto=format&fit=crop",
-      genre: "Dance / Industrial Rock",
-      status: "AVAILABLE NOW",
-      mvUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      tracks: [
-        { no: "01", title: "Shadow Horizon (Title)", duration: "3:32", isTitle: true },
-        { no: "02", title: "Black Sun", duration: "3:18", isTitle: false },
-        { no: "03", title: "Ignition Beat", duration: "3:05", isTitle: false },
-        { no: "04", title: "Gravity Zone", duration: "3:40", isTitle: false },
-        { no: "05", title: "Chrono Break", duration: "2:52", isTitle: false }
-      ]
+      id: "sheet-2",
+      no: "2",
+      title: "Watercolor Bus Stop",
+      album: "Piano Journal",
+      artist: "ALEX K",
+      plays: "380M",
+      sheetPdf: "sheet music/2-Watercolor Bus Stop/Watercolor Bus Stop.pdf",
+      audioSrc: "sheet music/2-Watercolor Bus Stop/Watercolor Bus Stop.mp3"
     },
     {
-      id: "rel-3",
-      title: "CODE : RED OVERDRIVE",
-      artist: "NEXUS",
-      type: "1st EP",
-      date: "2026.04.18",
-      cover: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=600&auto=format&fit=crop",
-      genre: "Hip-Hop / Trap",
-      status: "AVAILABLE NOW",
-      mvUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      tracks: [
-        { no: "01", title: "Overdrive (Title)", duration: "2:48", isTitle: true },
-        { no: "02", title: "Neon Alley", duration: "3:12", isTitle: false },
-        { no: "03", title: "Skate 02", duration: "2:30", isTitle: false }
-      ]
+      id: "sheet-3",
+      no: "3",
+      title: "Symphony of the Cold Brew",
+      album: "Memories",
+      artist: "ALEX K",
+      plays: "290M",
+      sheetPdf: "sheet music/3-Symphony of the Cold Brew/Symphony of the Cold Brew.pdf",
+      audioSrc: "sheet music/3-Symphony of the Cold Brew/Symphony of the Cold Brew.mp3"
     },
     {
-      id: "rel-4",
-      title: "BLUE HOUR RHAPSODY",
-      artist: "KAIROS",
-      type: "Special Single",
-      date: "2026.02.28",
-      cover: "https://images.unsplash.com/photo-1511379938547-c1f69419868d?q=80&w=600&auto=format&fit=crop",
-      genre: "R&B / Soul",
-      status: "AVAILABLE NOW",
-      mvUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ",
-      tracks: [
-        { no: "01", title: "Midnight Avenue (Title)", duration: "3:55", isTitle: true },
-        { no: "02", title: "Moonlight Serenade", duration: "4:02", isTitle: false }
-      ]
+      id: "sheet-4",
+      no: "4",
+      title: "Saturday Motion",
+      album: "Quiet Sunlight",
+      artist: "Sanghoon, Kim.",
+      plays: "210M",
+      sheetPdf: "sheet music/4-Saturday Motion/Saturday Motion.pdf",
+      audioSrc: "sheet music/4-Saturday Motion/Saturday Motion.mp3"
+    },
+    {
+      id: "sheet-5",
+      no: "5",
+      title: "Lazy Saturday Suns",
+      album: "Quiet Sunlight",
+      artist: "Sanghoon, Kim.",
+      plays: "195M",
+      sheetPdf: "sheet music/5-Lazy Saturday Suns/Lazy Saturday Suns.pdf",
+      audioSrc: "sheet music/5-Lazy Saturday Suns/Lazy Saturday Suns.mp3"
     }
   ],
 

@@ -1666,3 +1666,190 @@ h1, h2, h3, h4, .font-display {
   }
 }
 
+/* ==========================================================================
+   PIANO SHEET MUSIC & AUDIO RELEASES BOX (POPULAR TRACKS)
+   ========================================================================== */
+.piano-releases-container {
+  display: block;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.piano-popular-tracks-box {
+  background: rgba(15, 15, 23, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 36px 40px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 30px rgba(168, 85, 247, 0.1);
+}
+
+.tracks-box-header {
+  margin-bottom: 24px;
+}
+
+.tracks-box-title {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.piano-tracks-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.piano-track-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 16px 22px;
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 14px;
+  transition: var(--transition-smooth);
+}
+
+.piano-track-row:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(168, 85, 247, 0.35);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+.track-row-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.05rem;
+}
+
+.track-row-no {
+  color: var(--secondary-neon);
+  font-weight: 800;
+  font-size: 0.95rem;
+}
+
+.track-name {
+  color: #fff;
+  font-weight: 700;
+}
+
+.track-album {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.track-row-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn-sheet-pdf {
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  background: rgba(236, 72, 153, 0.14);
+  border: 1px solid rgba(236, 72, 153, 0.5);
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.btn-sheet-pdf i {
+  color: var(--secondary-neon);
+}
+
+.btn-sheet-pdf:hover {
+  background: rgba(236, 72, 153, 0.3);
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(236, 72, 153, 0.4);
+}
+
+.btn-play-audio {
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 6px 16px;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, var(--primary-neon), var(--cyber-cyan));
+  border: none;
+  color: #fff;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  box-shadow: 0 0 12px rgba(168, 85, 247, 0.35);
+}
+
+.btn-play-audio:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.6);
+}
+
+.track-plays {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--cyber-cyan);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: 4px;
+}
+
+.tracks-box-footer {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+
+.btn-youtube-channel {
+  background: #ff0033;
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 800;
+  padding: 10px 24px;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: var(--transition-smooth);
+  box-shadow: 0 0 20px rgba(255, 0, 51, 0.4);
+}
+
+.btn-youtube-channel:hover {
+  background: #e6002e;
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 0 30px rgba(255, 0, 51, 0.7);
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .piano-popular-tracks-box {
+    padding: 24px 18px;
+  }
+  .piano-track-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .track-row-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+

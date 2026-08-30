@@ -309,29 +309,46 @@ function openArtistModal(artistId) {
 }
 
 /* ==========================================================================
-   4. LATEST RELEASES
+   4. SHEET MUSIC & AUDIO TRACKS (POPULAR TRACKS)
    ========================================================================== */
 function renderReleases() {
   const container = document.getElementById("releases-grid");
   if (!container) return;
+  const isEn = window.currentLang === 'en';
 
-  container.innerHTML = NOVA_DATA.releases.map((rel, idx) => `
-    <div class="release-card reveal reveal-delay-${(idx % 4) + 1}">
-      <div class="release-thumb">
-        <img src="${rel.cover}" alt="${rel.title}" loading="lazy" />
-        <div class="release-play-overlay" onclick="openMvModal('${rel.title}', '${rel.artist}')">
-          <div class="play-circle">
-            <i class="fa-solid fa-play"></i>
-          </div>
-        </div>
+  container.className = "piano-releases-container";
+  container.innerHTML = `
+    <div class="piano-popular-tracks-box reveal">
+      <div class="tracks-box-header">
+        <h3 class="tracks-box-title">POPULAR TRACKS</h3>
       </div>
-      <div class="release-info">
-        <span class="rel-type">${rel.type} · ${rel.date}</span>
-        <h4 class="rel-title">${rel.title}</h4>
-        <p class="rel-artist">${rel.artist}</p>
+      <ul class="piano-tracks-list">
+        ${NOVA_DATA.releases.map((t, idx) => `
+          <li class="piano-track-row reveal reveal-delay-${(idx % 4) + 1}">
+            <div class="track-row-title">
+              <strong class="track-name">${t.title}</strong>
+              <span class="track-album">(${t.album})</span>
+            </div>
+            <div class="track-row-actions">
+              <button class="btn btn-sheet-pdf" onclick="openSheetMusicModal('${t.title}', '${t.sheetPdf}')" title="피아노 악보 PDF 보기">
+                <i class="fa-solid fa-file-pdf"></i> ${isEn ? 'SHEET PDF' : '악보보기'}
+              </button>
+              <button class="btn btn-play-audio" onclick="playFloatingAudio('${t.title}', '${t.artist}', '${t.audioSrc}')" title="음원 바로 듣기">
+                <i class="fa-solid fa-play"></i> ${isEn ? 'PLAY AUDIO' : '음원듣기'}
+              </button>
+              <span class="track-plays"><i class="fa-solid fa-headphones"></i> ${t.plays}</span>
+            </div>
+          </li>
+        `).join("")}
+      </ul>
+
+      <div class="tracks-box-footer">
+        <a href="https://www.youtube.com/watch?v=UF528KwJ5Io&list=PLIFlATW5erkc&index=2" target="_blank" rel="noopener noreferrer" class="btn btn-youtube-channel">
+          <i class="fa-brands fa-youtube"></i> ${isEn ? 'OFFICIAL YOUTUBE CHANNEL' : '공식 유튜브 채널 바로가기'}
+        </a>
       </div>
     </div>
-  `).join("");
+  `;
 }
 
 /* MV / Video Modal */
