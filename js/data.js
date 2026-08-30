@@ -637,17 +637,17 @@ const NOVA_DATA = {
     },
     {
       id: "pl-4",
-      title: "Midnight Quiet Sunlight",
-      enTitle: "Midnight Quiet Sunlight",
-      desc: "고단한 하루의 끝, 지친 마음을 가만히 감싸 안아주는 포근한 밤의 선율",
-      enDesc: "A comforting musical blanket at the end of a weary day to guide you into peaceful rest",
-      badge: "SLEEP & RELAX",
+      title: "Lazy Saturday Suns",
+      enTitle: "Lazy Saturday Suns",
+      desc: "나른하고 평화로운 토요일의 햇살처럼 지친 마음을 가만히 감싸 안아주는 선율",
+      enDesc: "A peaceful lazy Saturday melody that gently comforts your soul with warm ambient sunlight",
+      badge: "LAZY & RELAX",
       tracksCount: "9 TRACKS · 38 MIN",
       cover: "images/playlist_korean_nature4.jpg",
-      primaryTrackTitle: "Saturday Motion",
+      primaryTrackTitle: "Lazy Saturday Suns",
       primaryTrackArtist: "Sanghoon, Kim.",
-      audioSrc: "sheet music/4-Saturday Motion/Saturday Motion.mp3",
-      youtubeUrl: "https://www.youtube.com/watch?v=UF528KwJ5Io&list=PLIFlATW5erkc&index=2"
+      audioSrc: "sheet music/5-Lazy Saturday Suns/Lazy Saturday Suns.mp3",
+      youtubeUrl: "https://www.youtube.com/watch?v=90ze-T_UyKI&list=PLIFlATW5erkc&index=3"
     }
   ]
 };
