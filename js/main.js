@@ -41,12 +41,13 @@ function setLanguage(lang) {
   // 2. Update Language Toggle Button States (All buttons)
   document.querySelectorAll(".lang-btn").forEach(btn => {
     btn.classList.remove("active");
-    if (btn.innerText.trim().toUpperCase() === lang.toUpperCase()) {
+    const txt = btn.innerText.trim().toUpperCase();
+    if ((lang === 'ko' && txt === 'KR') || (lang === 'en' && txt === 'EN')) {
       btn.classList.add("active");
     }
   });
 
-  // 3. Re-render dynamic sections with new language
+  // 3. Re-render dynamic sections with new language ensuring all images are preserved
   renderCompanyStats();
   renderArtists(currentArtistCategory);
   renderReleases();
