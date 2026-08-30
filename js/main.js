@@ -293,12 +293,9 @@ function openArtistModal(artistId) {
     </div>
 
     <div style="display: flex; gap: 12px; margin-top: 28px;">
-      <button class="btn btn-primary btn-sm" onclick="alert(window.currentLang === 'ko' ? '${artist.name} 공식 음원 플랫폼으로 이동합니다.' : 'Redirecting to ${artist.name} on Spotify.')">
-        <i class="fa-brands fa-spotify"></i> ${isEn ? 'STREAM ON SPOTIFY' : '스포티파이 음원 듣기'}
-      </button>
-      <button class="btn btn-glass btn-sm" onclick="alert(window.currentLang === 'ko' ? '${artist.name} 유튜브 공식 채널로 이동합니다.' : 'Redirecting to ${artist.name} Official YouTube Channel.')">
-        <i class="fa-brands fa-youtube"></i> ${isEn ? 'OFFICIAL CHANNEL' : '공식 유튜브 채널'}
-      </button>
+      <a href="https://www.youtube.com/watch?v=UF528KwJ5Io&list=RDMMUF528KwJ5Io&index=1" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="background: #ff0033; text-decoration: none;">
+        <i class="fa-brands fa-youtube"></i> ${isEn ? 'OFFICIAL YOUTUBE CHANNEL' : '공식 유튜브 채널 바로가기'}
+      </a>
     </div>
   `;
 
