@@ -228,7 +228,8 @@ const NOVA_DATA = {
           album: "Piano Journal", 
           plays: "420M",
           sheetPdf: "sheet music/1-Sunday Slow Motion/Sunday Slow Motion.pdf",
-          audioSrc: "sheet music/1-Sunday Slow Motion/Sunday Slow Motion.mp3"
+          audioSrc: "sheet music/1-Sunday Slow Motion/Sunday Slow Motion.mp3",
+          videoUrl: "https://www.youtube.com/watch?v=pKtkKWE8EEM"
         },
         { 
           title: "Watercolor Bus Stop", 
