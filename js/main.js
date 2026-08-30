@@ -52,8 +52,6 @@ function setLanguage(lang) {
   renderArtists(currentArtistCategory);
   renderReleases();
   renderPlaylists();
-  renderWorldTours();
-  renderNews();
 }
 
 /* ==========================================================================
