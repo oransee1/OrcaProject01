@@ -919,10 +919,14 @@ h1, h2, h3, h4, .font-display {
 }
 
 .artist-card-title {
-  font-size: 1.8rem;
-  font-weight: 900;
+  font-size: 1.35rem;
+  font-weight: 800;
   margin-bottom: 4px;
   color: #fff;
+  line-height: 1.25;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .artist-card-meta {
