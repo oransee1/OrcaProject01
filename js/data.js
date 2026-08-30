@@ -220,7 +220,7 @@ const NOVA_DATA = {
       badge: "MAESTRO PIANIST",
       bio: "손끝에서 피어나는 깊은 서사와 웅장한 선율로 전 세계 클래식 & 영화 음악 팬들을 사로잡은 감성 피아니스트.",
       spotifyUrl: "#",
-      youtubeUrl: "https://www.youtube.com/watch?v=pKtkKWE8EEM",
+      youtubeUrl: "https://www.youtube.com/watch?v=UF528KwJ5Io&list=PLIFlATW5erkc&index=2",
       instagramUrl: "#",
       topTracks: [
         { 
@@ -260,7 +260,7 @@ const NOVA_DATA = {
       badge: "HEALING PIANIST",
       bio: "손끝의 섬세한 터치와 깊은 호흡으로 일상에 잔잔한 휴식과 따뜻한 감동을 전하는 감성 피아니스트.",
       spotifyUrl: "#",
-      youtubeUrl: "https://www.youtube.com/watch?v=pKtkKWE8EEM",
+      youtubeUrl: "https://www.youtube.com/watch?v=UF528KwJ5Io&list=PLIFlATW5erkc&index=2",
       instagramUrl: "#",
       topTracks: [
         { 
