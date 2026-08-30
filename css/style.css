@@ -3,7 +3,7 @@
    Aesthetic: Neo-Futuristic K-POP Luxury & Cyberpunk Elegance
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,900&family=Syne:wght@500;700;800;900&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Great+Vibes&family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;0,800;0,900;1,900&family=Noto+Sans+KR:wght@300;400;500;700;900&family=Pinyon+Script&family=Syne:wght@500;700;800;900&display=swap');
 
 /* 공고딕 (Gong Gothic) 웹폰트 */
 @font-face {
@@ -564,6 +564,22 @@ h1, h2, h3, h4, .font-display {
   background: var(--primary-neon);
   border-color: var(--primary-neon);
   box-shadow: 0 0 25px var(--primary-neon);
+}
+
+/* Sang-hoon's Piano Luxury Script Title */
+.comeback-artist-title {
+  font-family: 'Alex Brush', 'Great Vibes', cursive, 'Syne', sans-serif;
+  font-size: 2.3rem;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: #fff;
+  display: inline-block;
+  background: linear-gradient(135deg, #ffffff 40%, #c084fc 75%, #38bdf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 20px rgba(168, 85, 247, 0.4);
+  margin-bottom: 2px;
 }
 
 .countdown-grid {
