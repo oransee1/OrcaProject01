@@ -51,6 +51,7 @@ function setLanguage(lang) {
   renderCompanyStats();
   renderArtists(currentArtistCategory);
   renderReleases();
+  renderPlaylists();
   renderWorldTours();
   renderNews();
 }
@@ -413,6 +414,52 @@ function renderWorldTours() {
       </div>
     `;
   }).join("");
+}
+
+/* ==========================================================================
+   5.5 CURATED PLAYLISTS
+   ========================================================================== */
+function renderPlaylists() {
+  const container = document.getElementById("playlist-grid");
+  if (!container || !NOVA_DATA.playlists) return;
+
+  const isEn = window.currentLang === 'en';
+
+  container.innerHTML = NOVA_DATA.playlists.map((pl, idx) => {
+    const title = (isEn && pl.enTitle) ? pl.enTitle : pl.title;
+    const desc = (isEn && pl.enDesc) ? pl.enDesc : pl.desc;
+
+    return `
+      <div class="playlist-card reveal active reveal-delay-${(idx % 4) + 1}">
+        <div class="playlist-cover-wrap">
+          <img src="${pl.cover}" alt="${title}" class="playlist-cover-img" loading="lazy" />
+          <div class="playlist-badge">${pl.badge}</div>
+          <div class="playlist-play-overlay" onclick="playFloatingAudio('${pl.primaryTrackTitle}', '${pl.primaryTrackArtist}', '${pl.audioSrc}')" title="플레이리스트 음원 재생">
+            <div class="play-circle">
+              <i class="fa-solid fa-play"></i>
+            </div>
+          </div>
+        </div>
+        <div class="playlist-info">
+          <span class="playlist-meta"><i class="fa-solid fa-music"></i> ${pl.tracksCount}</span>
+          <h4 class="playlist-title">${title}</h4>
+          <p class="playlist-desc">${desc}</p>
+          <div class="playlist-actions">
+            <button class="btn btn-playlist-play" onclick="playFloatingAudio('${pl.primaryTrackTitle}', '${pl.primaryTrackArtist}', '${pl.audioSrc}')">
+              <i class="fa-solid fa-play"></i> ${isEn ? 'PLAY ALL' : '전체 듣기'}
+            </button>
+            <a href="${pl.youtubeUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-playlist-yt" title="유튜브에서 감상">
+              <i class="fa-brands fa-youtube"></i> ${isEn ? 'WATCH' : '영상 감상'}
+            </a>
+          </div>
+        </div>
+      </div>
+    `;
+  }).join("");
+
+  if (typeof observeNewReveals === 'function') {
+    observeNewReveals();
+  }
 }
 
 /* ==========================================================================

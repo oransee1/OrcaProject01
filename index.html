@@ -37,7 +37,7 @@
         <li><a href="#about" class="nav-link" data-i18n="nav_about" onclick="openAboutStoryModal(event)">ABOUT</a></li>
         <li><a href="#artists" class="nav-link" data-i18n="nav_artists">ARTISTS</a></li>
         <li><a href="#releases" class="nav-link" data-i18n="nav_releases">Sheet music & Audio</a></li>
-        <li><a href="#audition" class="nav-link" data-i18n="nav_audition">Playlist</a></li>
+        <li><a href="#playlist" class="nav-link" data-i18n="nav_playlist">Playlist</a></li>
       </ul>
 
       <div class="nav-actions">
@@ -207,24 +207,17 @@
     </div>
   </section>
 
-  <!-- GLOBAL AUDITION SECTION -->
-  <section class="section" id="audition" style="padding-top: 60px;">
+  <!-- CURATED PLAYLISTS SECTION -->
+  <section class="section" id="playlist" style="padding-top: 60px;">
     <div class="container">
-      <div class="audition-banner reveal">
-        <span class="comeback-tag" style="display: inline-block; margin-bottom: 16px;" data-i18n="audition_tag">2026 GLOBAL SEARCH</span>
-        <h2><span data-i18n="audition_title">BE THE NEXT</span> <span class="gradient-text" data-i18n="audition_title_highlight">GLOBAL ICON</span></h2>
-        <p data-i18n="audition_desc">당신의 숨겨진 열정과 재능으로 세계 무대의 주인공이 되세요. 노바 엔터테인먼트가 미래의 글로벌 스타를 찾습니다.</p>
-        
-        <div class="audition-fields">
-          <span class="field-tag"><i class="fa-solid fa-microphone-lines"></i> <span data-i18n="field_vocal">VOCAL</span></span>
-          <span class="field-tag"><i class="fa-solid fa-person-walking"></i> <span data-i18n="field_dance">DANCE</span></span>
-          <span class="field-tag"><i class="fa-solid fa-record-vinyl"></i> <span data-i18n="field_rap">RAP</span></span>
-          <span class="field-tag"><i class="fa-solid fa-sliders"></i> <span data-i18n="field_producer">PRODUCER</span></span>
-        </div>
+      <div class="section-header reveal">
+        <span class="section-subtitle" data-i18n="playlist_sub">HEALING & MOOD</span>
+        <h2 class="section-title"><span data-i18n="playlist_title">CURATED</span> <span class="gradient-text" data-i18n="playlist_title_highlight">PLAYLISTS</span></h2>
+        <p class="section-desc" data-i18n="playlist_desc">하루의 온도를 높여주는 감성 피아노와 힐링 테마 플레이리스트 컬렉션</p>
+      </div>
 
-        <button class="btn btn-primary" onclick="openAuditionModal()">
-          <i class="fa-solid fa-paper-plane"></i> <span data-i18n="btn_apply_audition">ONLINE AUDITION APPLY</span>
-        </button>
+      <div class="playlist-grid" id="playlist-grid">
+        <!-- Rendered by JS -->
       </div>
     </div>
   </section>
