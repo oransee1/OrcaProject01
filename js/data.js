@@ -609,17 +609,17 @@ const NOVA_DATA = {
     },
     {
       id: "pl-2",
-      title: "Rainy Cafe & Bus Stop",
-      enTitle: "Rainy Cafe & Bus Stop",
+      title: "Watercolor Bus Stop",
+      enTitle: "Watercolor Bus Stop",
       desc: "촉촉한 빗방울 소리와 투명한 수채화처럼 번지는 감성 연주곡",
       enDesc: "Soft raindrops on window panes and transparent watercolor emotions in gentle harmony",
-      badge: "RAINY MOOD",
+      badge: "WATERCOLOR MOOD",
       tracksCount: "8 TRACKS · 35 MIN",
       cover: "images/playlist_korean_nature2.jpg",
       primaryTrackTitle: "Watercolor Bus Stop",
       primaryTrackArtist: "ALEX K",
       audioSrc: "sheet music/2-Watercolor Bus Stop/Watercolor Bus Stop.mp3",
-      youtubeUrl: "https://www.youtube.com/watch?v=UF528KwJ5Io&list=PLIFlATW5erkc&index=2"
+      youtubeUrl: "https://www.youtube.com/watch?v=EAy7jr297CQ&list=PLIFlATW5erkc&index=5"
     },
     {
       id: "pl-3",
