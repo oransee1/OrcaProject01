@@ -244,7 +244,7 @@ h1, h2, h3, h4, .font-display {
   align-items: center;
   gap: 12px;
   text-decoration: none;
-  margin-right: clamp(36px, 4vw, 54px);
+  margin-right: clamp(52px, 6vw, 84px);
   flex-shrink: 0;
 }
 
